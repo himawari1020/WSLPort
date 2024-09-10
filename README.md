@@ -3,10 +3,14 @@ WSL2のポート開放を行うps1スクリプト。
 
 # 前提環境
 あらかじめWSL2が入っていること、このスクリプトはWSL2ありきの物です。
-また、.wslconfigを下記の様に使っている方限定です、NATモードでは動作未確認です。
+また、.wslconfigを下記の様にミラーモードで使っている方限定です、NATモードでは動作未確認です。
 
 ```
-
+[wsl2]
+networkingMode=mirrored
+dnsTunneling=true
+firewall=true
+autoProxy=true
 ```
 
 # 概要
